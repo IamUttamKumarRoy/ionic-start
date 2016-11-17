@@ -104,6 +104,98 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.ionic_radio_button', {
+    url: '/ionic_radio_button',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_radio_button.html'
+      }
+    }
+  })
+
+  .state('app.ionic_range', {
+    url: '/ionic_range',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_range.html'
+      }
+    }
+  })
+  
+  .state('app.ionic_select', {
+    url: '/ionic_select',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_select.html'
+      }
+    }
+  })
+
+  .state('app.ionic_tabs', {
+    url: '/ionic_tabs',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_tabs.html'
+      }
+    }
+  })
+  
+  .state('app.ionic_grid', {
+    url: '/ionic_grid',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_grid.html'
+      }
+    }
+  })
+
+  .state('app.ionic_icons', {
+    url: '/ionic_icons',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_icons.html'
+      }
+    }
+  })
+
+  .state('app.ionic_padding', {
+    url: '/ionic_padding',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_padding.html'
+      }
+    }
+  })
+
+.state('app.ionic_js_action_sheet', {
+    url: '/ionic_js_action_sheet',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_js_action_sheet.html',
+        controller: 'myCtrl'
+      }
+    }
+  })
+
+  .state('app.ionic_js_backdrop', {
+    url: '/ionic_js_backdrop',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_js_backdrop.html',
+        controller: 'myCtrl'
+      }
+    }
+  })
+
+  .state('app.ionic_js_forms', {
+    url: '/ionic_js_forms',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_js_forms.html',
+        controller: 'myCtrl'
+      }
+    }
+  })
 /* ----------- [End My Controller Options] ----------------*/
 
   .state('app.search', {

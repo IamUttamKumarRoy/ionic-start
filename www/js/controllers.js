@@ -52,5 +52,22 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+
+.controller('myCtrl', function($scope,$ionicBackdrop,$timeout) {
+    $scope.checkboxModel = {
+       value1 : false,
+       value2 : false
+    }
+    $scope.toggleModel = {
+      value1 : true,
+      value2 : false,
+      value3 : false
+    }
+   $scope.showBackdrop = function() {
+      $ionicBackdrop.retain();
+    
+      $timeout(function() {
+         $ionicBackdrop.release();
+      }, 3000);
+   };
 });
