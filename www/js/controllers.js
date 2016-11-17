@@ -53,7 +53,29 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('myCtrl', function($scope,$ionicBackdrop,$timeout) {
+.controller('myCtrl', function($scope,$ionicBackdrop,$timeout,$ionicLoading) {
+    
+    $scope.showLoading = function() {
+      $ionicLoading.show({
+         template: 'Loading...'
+      });
+    }
+
+    $scope.hideLoading = function(){
+      $ionicLoading.hide();
+    }
+
+    $scope.items = [
+       {id: 1},
+       {id: 2},
+       {id: 3},
+       {id: 4}
+    ]
+
+    $scope.moveItem = function(item, fromIndex, toIndex) {
+       $scope.items.splice(fromIndex, 1);
+       $scope.items.splice(toIndex, 0, item);
+    }    
     $scope.checkboxModel = {
        value1 : false,
        value2 : false
@@ -63,6 +85,9 @@ angular.module('starter.controllers', [])
       value2 : false,
       value3 : false
     }
+    $scope.onTouchFunction = function() {
+      console.log('Working');
+    }
    $scope.showBackdrop = function() {
       $ionicBackdrop.retain();
     
@@ -70,4 +95,37 @@ angular.module('starter.controllers', [])
          $ionicBackdrop.release();
       }, 3000);
    };
+})
+.controller('MyController', function($scope, $ionicModal) {
+
+   $ionicModal.fromTemplateUrl('my-modal.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+   }).then(function(modal) {
+      $scope.modal = modal;
+   });
+  
+   $scope.openModal = function() {
+      $scope.modal.show();
+   };
+  
+   $scope.closeModal = function() {
+      $scope.modal.hide();
+   };
+  
+   //Cleanup the modal when we're done with it!
+   $scope.$on('$destroy', function() {
+      $scope.modal.remove();
+   });
+  
+   // Execute action on hide modal
+   $scope.$on('modal.hidden', function() {
+      // Execute action
+   });
+  
+   // Execute action on remove modal
+   $scope.$on('modal.removed', function() {
+      // Execute action
+   });
+
 });

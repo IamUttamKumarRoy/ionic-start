@@ -196,6 +196,76 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
+
+  .state('app.ionic_js_events', {
+    url: '/ionic_js_events',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_js_events.html',
+        controller: 'myCtrl'
+      }
+    }
+  })
+  
+  .state('app.ionic_js_header', {
+    url: '/ionic_js_header',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_js_header.html',
+        controller: 'myCtrl'
+      }
+    }
+  })  
+  
+  .state('app.ionic_js_footer', {
+    url: '/ionic_js_footer',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_js_footer.html',
+        controller: 'myCtrl'
+      }
+    }
+  })  
+  
+  .state('app.ionic_js_keyboard', {
+    url: '/ionic_js_keyboard',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_js_keyboard.html',
+        controller: 'myCtrl'
+      }
+    }
+  })  
+  
+  .state('app.ionic_js_list', {
+    url: '/ionic_js_list',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_js_list.html',
+        controller: 'myCtrl'
+      }
+    }
+  })  
+  
+  .state('app.ionic_js_loading', {
+    url: '/ionic_js_loading',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_js_loading.html',
+        controller: 'myCtrl'
+      }
+    }
+  })  
+  
+  .state('app.ionic_js_modal', {
+    url: '/ionic_js_modal',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/ionic_js_modal.html',
+        controller: 'MyController'
+      }
+    }
+  })
 /* ----------- [End My Controller Options] ----------------*/
 
   .state('app.search', {
